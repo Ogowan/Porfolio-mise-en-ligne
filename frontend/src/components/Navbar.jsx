@@ -66,7 +66,7 @@ const Navbar = () => {
       <ul className="flex flex-col gap-4 w-full">
         <li className="cursor-pointer hover:bg-blue-500 p-2 rounded w-full text-center">Home</li>
         <li className="cursor-pointer hover:bg-blue-500 p-2 rounded w-full text-center">About</li>
-        <li className="cursor-pointer hover:bg-blue-500 p-2 rounded w-full text-center">resume </li>
+        <li className="cursor-pointer hover:bg-blue-500 p-2 rounded w-full text-center">Resume </li>
         <li className="cursor-pointer hover:bg-blue-500 p-2 rounded w-full text-center">Portfolio</li>
         <li className="cursor-pointer hover:bg-blue-500 p-2 rounded w-full text-center">Services</li>
         <li className="cursor-pointer hover:bg-blue-500 p-2 rounded w-full text-center">Contact</li>

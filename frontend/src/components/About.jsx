@@ -40,7 +40,6 @@ const About = () => {
                         <div className="flex flex-col gap-2 flex-1">
                             <p><span className="font-bold">Age:</span>  21</p>
                             <p><span className="font-bold">Email:</span>  nbol7744@gmail.com</p>
-
                             <p><span className="font-bold">City:</span>  Nantes</p>
                             <p><span className="font-bold">Status:</span>  Student</p>
                         </div>
