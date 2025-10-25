@@ -3,6 +3,9 @@ import Navbar from "./components/Navbar";
 import Body from "./components/Body";
 import About from "./components/About";
 import Footer from "./components/Footer";
+import Resume from "./components/Resume";
+import Portfolio from "./components/Portfolio";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -15,6 +18,10 @@ function App() {
         <div className="flex-1">
           <Body />
           <About />
+          <Resume/>
+          <Logiciel/>
+          <Portfolio/>
+          <Contact/>
         </div>
         <Footer />
       </main>
