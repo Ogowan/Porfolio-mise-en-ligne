@@ -23,7 +23,7 @@ const Navbar = () => {
           {/* Cercle intérieur avec image */}
           <ul className="flex gap-2">
             <li>
-              <button className="bg-white border-1 rounded-full  w-10 h-10  overflow-hidden">
+              <button className="bg-gray-400 border-1 rounded-full  w-10 h-10  overflow-hidden">
                 <img
                   src="/src/assets/instagram.png"
                   alt="Avatar"

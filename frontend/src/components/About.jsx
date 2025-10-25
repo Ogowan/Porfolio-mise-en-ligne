@@ -31,7 +31,7 @@ const About = () => {
                         {/* Colonne 1 */}
                         <div className="flex flex-col gap-2 flex-1">
                             <p><span className="font-bold">Birthday:</span>  16/10/2004</p>
-                            <p><span className="font-bold">CV:</span>  Download</p>
+                            <p><span className="font-bold">CV:</span>  Download ⬇️</p>
                             <p><span className="font-bold">Phone:</span>  0708326585</p>
                             <p><span className="font-bold">Certificate:</span>  BTS CIEL</p>
                         </div>
@@ -39,7 +39,7 @@ const About = () => {
                         {/* Colonne 2 */}
                         <div className="flex flex-col gap-2 flex-1">
                             <p><span className="font-bold">Age:</span>  21</p>
-                            <p><span className="font-bold">Email:</span>  nbol7744@gmail.com</p>
+                            <p><span className="font-bold">Email:</span>  nathan.bolyos@gmail.com</p>
                             <p><span className="font-bold">City:</span>  Nantes</p>
                             <p><span className="font-bold">Status:</span>  Student</p>
                         </div>

@@ -45,7 +45,7 @@ const SkillBar = ({ name, percent }) => {
         </div>
         <div className="w-full max-w-full md:max-w-lg bg-gray-300 rounded-full h-6">
           <div
-            className="h-6 rounded-full transition-all duration-1000"
+            className="h-6 rounded-full transition-all duration-1000 "
             style={{
               width: `${percent}%`,
               backgroundColor: getColor(percent),
