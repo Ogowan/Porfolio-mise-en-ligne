@@ -6,6 +6,8 @@ import Footer from "./components/Footer";
 import Resume from "./components/Resume";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
+import Logiciel from "./components/Logiciel";
+
 
 function App() {
   return (
