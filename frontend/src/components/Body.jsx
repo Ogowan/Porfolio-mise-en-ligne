@@ -19,7 +19,7 @@ const Body = () => {
   return (
     <div
       className="w-screen h-screen bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center text-white relative"
-      style={{ backgroundImage: "url('/assets/feu.jpg')" }}
+      style={{ backgroundImage: "url('/Porfolio-mise-en-ligne/assets/feu.jpg')" }}
     >
       <div className="relative z-10 text-center">
         <h1 className="text-5xl font-bold mb-4 custom-text-style">
