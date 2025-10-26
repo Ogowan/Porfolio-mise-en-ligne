@@ -36,7 +36,10 @@ const Portfolio = () => {
           observer.disconnect();
         }
       },
-      { threshold: 0.3 }
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      }
     );
 
     if (sectionRef.current) {
@@ -65,7 +68,11 @@ const Portfolio = () => {
               <div
                 key={index}
                 className="w-[400px] h-[384px] rounded shadow-lg overflow-hidden cursor-pointer hover:scale-105 transition-transform"
-                onClick={() => setSelectedImage(img)}
+                onClick={() => {
+                  if (window.innerWidth >= 768) {
+                    setSelectedImage(img);
+                  }
+                }}
               >
                 <img
                   src={img}
@@ -78,7 +85,7 @@ const Portfolio = () => {
         </div>
       ))}
 
-      {/* Agrandissement de l'image */}
+      {/* Agrandissement de l'image (désactivé sur mobile) */}
       {selectedImage && (
         <div
           className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
