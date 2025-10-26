@@ -1,4 +1,3 @@
-// App.jsx
 import Navbar from "./components/Navbar";
 import Body from "./components/Body";
 import About from "./components/About";
@@ -9,24 +8,21 @@ import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 import Logiciel from "./components/Logiciel";
 
-
 function App() {
   return (
-    <div className="flex min-h-screen overflow-x-hidden">
-      {/* Navbar fixe */}
+    <div className="relative min-h-screen">
+      {/* Navbar fixe à gauche */}
       <Navbar />
 
-      {/* Contenu principal */}
-      <main className=" flex-1 flex flex-col min-h-screen">
-        <div className="flex-1">
-          <section id="home" className="ml-64"><Body /></section>
-          <section id="about" className="ml-64"><About /></section>
-          <section id="resume" className="ml-64"><Resume /></section>
-          <section id="skills" className="ml-64"><Skills /></section>
-          <section id="services" className="ml-64"><Logiciel /></section>
-          <section id="portfolio" className="ml-64"><Portfolio /></section>
-          <section id="contact" className="ml-64"><Contact /></section>
-        </div>
+      {/* Contenu principal avec padding à gauche sur desktop */}
+      <main className="pt-16 lg:pt-0 lg:pl-64">
+        <section id="home" className="scroll-mt-24"><Body /></section>
+        <section id="about" className="scroll-mt-24"><About /></section>
+        <section id="resume" className="scroll-mt-24"><Resume /></section>
+        <section id="skills" className="scroll-mt-24"><Skills /></section>
+        <section id="services" className="scroll-mt-24"><Logiciel /></section>
+        <section id="portfolio" className="scroll-mt-24"><Portfolio /></section>
+        <section id="contact" className="scroll-mt-24"><Contact /></section>
         <Footer />
       </main>
     </div>

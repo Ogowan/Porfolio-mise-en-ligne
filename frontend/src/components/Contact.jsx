@@ -1,12 +1,35 @@
+import { useRef, useEffect, useState } from "react";
+
 const Contact = () => {
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); 
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section>
+    <section
+      ref={sectionRef}
+      className={`relative ${isVisible ? "animate-fadeInUp" : "opacity-0"}`}
+    >
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
-        <div className="max-w-2xl lg:max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900">Visit Our Location</h2>
-          <p className="mt-4 text-lg text-gray-500">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </p>
+        <div className="max-w-6xl mx-auto text-left mb-6">
+          <h1 className="font-bold text-4xl">Contact</h1>
         </div>
 
         <div className="mt-16 lg:mt-20">
@@ -22,7 +45,6 @@ const Contact = () => {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
-
             </div>
 
             {/* Contact Info */}
@@ -30,8 +52,10 @@ const Contact = () => {
               <div className="max-w-full mx-auto rounded-lg overflow-hidden">
                 <div className="px-6 py-4">
                   <h3 className="text-lg font-medium text-gray-900">Our Address</h3>
-                  <p className="mt-1 text-gray-600">16 RUE DE FLANDRES DUNKERQUE
-                    44100 Nantes</p>
+                  <p className="mt-1 text-gray-600">
+                    16 RUE DE FLANDRES DUNKERQUE<br />
+                    44100 Nantes
+                  </p>
                 </div>
                 <div className="border-t border-gray-200 px-6 py-4">
                   <h3 className="text-lg font-medium text-gray-900">Contact</h3>
@@ -43,6 +67,26 @@ const Contact = () => {
           </div>
         </div>
       </div>
+
+      {/* Animation CSS */}
+      <style>
+        {`
+          @keyframes fadeInUp {
+            from {
+              opacity: 0;
+              transform: translateY(20px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          .animate-fadeInUp {
+            animation: fadeInUp 1s ease-out forwards;
+          }
+        `}
+      </style>
     </section>
   );
 };

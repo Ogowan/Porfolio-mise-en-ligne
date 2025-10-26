@@ -1,40 +1,116 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const Portfolio = () => {
-  const [filter, setFilter] = useState("all");
+  const [selectedImage, setSelectedImage] = useState(null);
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   const projects = [
-    { id: 1, title: "Projet 1", category: "projet1", image: "/src/assets/feu.jpg" },
-    { id: 2, title: "Projet 2", category: "projet2", image: "/images/projet2.jpg" },
-    { id: 3, title: "Projet 3", category: "projet3", image: "/images/projet3.jpg" },
-    { id: 4, title: "Autre", category: "autre", image: "/images/autre.jpg" },
+    {
+      id: 1,
+      category: "Wantjob.com",
+      images: ["/src/assets/1.png", "/src/assets/2.png", "/src/assets/3.png"],
+    },
+    {
+      id: 2,
+      category: "Hoodie.com",
+      images: ["/src/assets/4.png", "/src/assets/5.png", "/src/assets/6.png"],
+    },
+    {
+      id: 3,
+      category: "Coffejob",
+      images: ["/src/assets/7.png", "/src/assets/8.png", "/src/assets/9.png"],
+    },
+    {
+      id: 4,
+      category: " ",
+      images: ["/src/assets/10.png", "/src/assets/11.png", "/src/assets/12.png"],
+    },
   ];
 
-  const filteredProjects = filter === "all"
-    ? projects
-    : projects.filter((project) => project.category === filter);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <section className="py-12 px-4">
-      <h2 className="text-3xl font-bold mb-6 text-center">Portfolio</h2>
-
-      {/* Boutons de filtre */}
-      <div className="flex justify-center gap-4 mb-8 flex-wrap">
-        <button onClick={() => setFilter("all")} className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Tous</button>
-        <button onClick={() => setFilter("projet1")} className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Projet 1</button>
-        <button onClick={() => setFilter("projet2")} className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Projet 2</button>
-        <button onClick={() => setFilter("projet3")} className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Projet 3</button>
+    <section
+      ref={sectionRef}
+      className={`py-12 px-4 text-center relative ${
+        isVisible ? "animate-fadeInUp" : "opacity-0"
+      }`}
+    >
+      <div className="max-w-6xl mx-auto text-left mb-6">
+        <h1 className="font-bold text-4xl">Portfolio</h1>
       </div>
 
-      {/* Affichage des projets */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {filteredProjects.map((project) => (
-          <div key={project.id} className="border rounded shadow p-4">
-            <img src={project.image} alt={project.title} className="w-full h-48 object-cover mb-4 rounded" />
-            <h3 className="text-lg font-semibold">{project.title}</h3>
+      {projects.map((project) => (
+        <div key={project.id} className="mb-16">
+          <h3 className="text-2xl font-semibold mb-6 capitalize">{project.category}</h3>
+          <div className="flex flex-wrap justify-center gap-8">
+            {project.images.map((img, index) => (
+              <div
+                key={index}
+                className="w-[400px] h-[384px] rounded shadow-lg overflow-hidden cursor-pointer hover:scale-105 transition-transform"
+                onClick={() => setSelectedImage(img)}
+              >
+                <img
+                  src={img}
+                  alt={`project-${project.id}-${index}`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
+
+      {/* Agrandissement de l'image */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+          onClick={() => setSelectedImage(null)}
+        >
+          <img
+            src={selectedImage}
+            alt="Zoomed"
+            className="max-w-4xl max-h-[85vh] rounded shadow-2xl"
+          />
+        </div>
+      )}
+
+      {/* Animation CSS */}
+      <style>
+        {`
+          @keyframes fadeInUp {
+            from {
+              opacity: 0;
+              transform: translateY(20px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          .animate-fadeInUp {
+            animation: fadeInUp 1s ease-out forwards;
+          }
+        `}
+      </style>
     </section>
   );
 };
