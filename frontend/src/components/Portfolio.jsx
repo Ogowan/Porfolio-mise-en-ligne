@@ -9,22 +9,22 @@ const Portfolio = () => {
     {
       id: 1,
       category: "Wantjob.com",
-      images: ["/src/assets/1.png", "/src/assets/2.png", "/src/assets/3.png"],
+      images: ["./src/assets/1.png", "./src/assets/2.png", "./src/assets/3.png"],
     },
     {
       id: 2,
       category: "Hoodie.com",
-      images: ["/src/assets/4.png", "/src/assets/5.png", "/src/assets/6.png"],
+      images: ["./src/assets/4.png", "./src/assets/5.png", "./src/assets/6.png"],
     },
     {
       id: 3,
       category: "Coffejob",
-      images: ["/src/assets/7.png", "/src/assets/8.png", "/src/assets/9.png"],
+      images: ["./src/assets/7.png", "./src/assets/8.png", "./src/assets/9.png"],
     },
     {
       id: 4,
       category: " ",
-      images: ["/src/assets/10.png", "/src/assets/11.png", "/src/assets/12.png"],
+      images: ["./src/assets/10.png", "./src/assets/11.png", "./src/assets/12.png"],
     },
   ];
 

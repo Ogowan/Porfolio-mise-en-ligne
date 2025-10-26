@@ -6,22 +6,22 @@ const Navbar = () => {
   const socialLinks = [
     {
       href: "https://www.instagram.com/nathan_bolyos/",
-      icon: "/src/assets/instagram.png",
+      icon: "./src/assets/instagram.png",
       alt: "Instagram",
     },
     {
       href: "https://wa.me/33708326585",
-      icon: "/src/assets/whatsapp.png",
+      icon: "./src/assets/whatsapp.png",
       alt: "WhatsApp",
     },
     {
       href: "https://github.com/Ogowan",
-      icon: "/src/assets/github.png",
+      icon: "./src/assets/github.png",
       alt: "GitHub",
     },
     {
       href: "https://www.linkedin.com/in/nathan-bolyos-8b4b35384/",
-      icon: "/src/assets/linkedin.png",
+      icon: "./src/assets/linkedin.png",
       alt: "LinkedIn",
     },
   ];
@@ -35,7 +35,7 @@ const Navbar = () => {
         <div className="flex justify-center mb-4">
           <div className="bg-gray-800 rounded-full p-1">
             <img
-              src="/src/assets/Nathan.jpg"
+              src="./src/assets/Nathan.jpg"
               alt="Avatar"
               className="w-36 h-36 rounded-full object-cover"
             />

@@ -43,7 +43,7 @@ const About = () => {
       <div className="flex flex-col md:flex-row items-start gap-6">
         <div className="w-64 h-64 bg-gray-200 flex items-center justify-center rounded-lg overflow-hidden mb-4 md:mb-0">
           <img
-            src="/src/assets/Nathan.jpg"
+            src="./src/assets/Nathan.jpg"
             alt="About Image"
             className="w-full h-full object-cover"
           />
@@ -60,7 +60,7 @@ const About = () => {
               <p>
                 <span className="font-bold">CV:</span>{" "}
                 <a
-                  href="/src/assets/Nathan Bolyos.pdf"
+                  href="./src/assets/Nathan Bolyos.pdf"
                   download
                   className="text-blue-600 hover:underline"
                 >
