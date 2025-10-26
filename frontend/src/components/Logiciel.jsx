@@ -52,7 +52,7 @@ const Logiciel = () => {
                 </p>
               </div>
               <img
-                src="./src/assets/github(3).png"
+                src="/assets/github(3).png"
                 alt="GitHub"
                 className="w-1/2 h-full object-contain"
               />
@@ -67,7 +67,7 @@ const Logiciel = () => {
                 </p>
               </div>
               <img
-                src="./src/assets/IntelliJ_IDEA_Icon.svg.png"
+                src="/assets/IntelliJ_IDEA_Icon.svg.png"
                 alt="IntelliJ IDEA"
                 className="w-1/2 h-full object-contain"
               />
@@ -82,7 +82,7 @@ const Logiciel = () => {
                 </p>
               </div>
               <img
-                src="./src/assets/Visual_Studio_Code_1.35_icon.svg"
+                src="/assets/Visual_Studio_Code_1.35_icon.svg"
                 alt="VS Code"
                 className="w-1/2 h-full object-contain"
               />
@@ -96,7 +96,7 @@ const Logiciel = () => {
             {/* React */}
             <div className="flex items-center bg-white rounded h-32 overflow-hidden">
               <img
-                src="./src/assets/react.svg"
+                src="/assets/react.svg"
                 alt="React"
                 className="w-1/2 h-full object-contain"
               />
@@ -111,7 +111,7 @@ const Logiciel = () => {
             {/* Tailwind CSS */}
             <div className="flex items-center bg-white rounded h-32 overflow-hidden">
               <img
-                src="./src/assets/Tailwind_CSS_Logo.svg"
+                src="/assets/Tailwind_CSS_Logo.svg"
                 alt="Tailwind CSS"
                 className="w-1/2 h-full object-contain"
               />
