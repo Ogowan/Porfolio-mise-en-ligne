@@ -19,7 +19,7 @@ const Portfolio = () => {
     {
       id: 3,
       category: "Coffejob",
-      images: ["/Porfolio-mise-en-ligne/assets/7.png", "frontend/public/assets/8.png", "frontend/public/assets/9.png"],
+      images: ["/Porfolio-mise-en-ligne/assets/7.png", "/Porfolio-mise-en-ligne/assets/8.png", "/Porfolio-mise-en-ligne/assets/9.png"],
     },
     {
       id: 4,

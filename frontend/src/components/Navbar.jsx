@@ -21,7 +21,7 @@ const Navbar = () => {
     },
     {
       href: "https://www.linkedin.com/in/nathan-bolyos-8b4b35384/",
-      icon: "/Porfolio-mise-en-ligne/assets/assets/linkedin.png",
+      icon: "/Porfolio-mise-en-ligne/assets/linkedin.png",
       alt: "LinkedIn",
     },
   ];
@@ -35,7 +35,7 @@ const Navbar = () => {
         <div className="flex justify-center mb-4">
           <div className="bg-gray-800 rounded-full p-1">
             <img
-              src="/Porfolio-mise-en-ligne/assets/assets/Nathan.jpg"
+              src="/Porfolio-mise-en-ligne/assets/Nathan.jpg"
               alt="Avatar"
               className="w-36 h-36 rounded-full object-cover"
             />
