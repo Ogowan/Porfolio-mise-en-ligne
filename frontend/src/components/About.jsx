@@ -14,7 +14,7 @@ const About = () => {
                 {/* Carré avec l'image */}
                 <div className="w-64 h-64 bg-gray-200 flex items-center justify-center rounded-lg overflow-hidden mb-4 md:mb-0">
                     <img
-                        src="/src/assets/react.svg"
+                        src="/src/assets/Nathan.jpg"
                         alt="About Image"
                         className="w-full h-full object-cover"
                     />
@@ -30,11 +30,21 @@ const About = () => {
                     <div className="flex gap-4">
                         {/* Colonne 1 */}
                         <div className="flex flex-col gap-2 flex-1">
-                            <p><span className="font-bold">Birthday:</span>  16/10/2004</p>
-                            <p><span className="font-bold">CV:</span>  Download ⬇️</p>
-                            <p><span className="font-bold">Phone:</span>  0708326585</p>
-                            <p><span className="font-bold">Certificate:</span>  BTS CIEL</p>
+                            <p><span className="font-bold">Birthday:</span> 16/10/2004</p>
+                            <p>
+                                <span className="font-bold">CV:</span>{" "}
+                                <a
+                                    href="/src/assets/Nathan Bolyos.pdf"
+                                    download
+                                    className="text-blue-600 hover:underline"
+                                >
+                                    Download ⬇️
+                                </a>
+                            </p>
+                            <p><span className="font-bold">Phone:</span> 0708326585</p>
+                            <p><span className="font-bold">Certificate:</span> BTS CIEL</p>
                         </div>
+
 
                         {/* Colonne 2 */}
                         <div className="flex flex-col gap-2 flex-1">

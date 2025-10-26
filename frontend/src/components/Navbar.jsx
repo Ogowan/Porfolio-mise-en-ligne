@@ -7,7 +7,7 @@ const Navbar = () => {
         <div className="bg-gray-800 rounded-full justify-center p-1">
           {/* Cercle intérieur avec image */}
           <img
-            src="/src/assets/Nathan.png"
+            src="/src/assets/Nathan.jpg"
             alt="Avatar"
             className="w-36 h-36 rounded-full object-cover"
           />
