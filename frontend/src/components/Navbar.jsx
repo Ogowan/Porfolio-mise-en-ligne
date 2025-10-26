@@ -7,9 +7,9 @@ const Navbar = () => {
         <div className="bg-gray-800 rounded-full justify-center p-1">
           {/* Cercle intérieur avec image */}
           <img
-            src="/src/assets/react.svg"
+            src="/src/assets/Nathan.png"
             alt="Avatar"
-            className="w-24 h-24 rounded-full object-cover"
+            className="w-36 h-36 rounded-full object-cover"
           />
         </div>
       </div>
@@ -23,53 +23,90 @@ const Navbar = () => {
           {/* Cercle intérieur avec image */}
           <ul className="flex gap-2">
             <li>
-              <button className="bg-gray-400 border-1 rounded-full  w-10 h-10  overflow-hidden">
-                <img
-                  src="/src/assets/instagram.png"
-                  alt="Avatar"
-                  className="w-full h-full object-cover"
-                />
-              </button>
-            </li>
-            <li>
-              <button className="bg-white rounded-full border-1  w-10 h-10  overflow-hidden">
-                <img
-                  src="/src/assets/whatsapp.png"
-                  alt="Avatar"
-                  className="w-full h-full object-cover"
-                />
-              </button>
-            </li>
-            <li>
-              <button className="bg-white rounded-full border-1 w-10 h-10 p-  overflow-hidden">
-                <img
-                  src="/src/assets/github.png"
-                  alt="Avatar"
-                  className="w-full h-full object-cover"
-                />
-              </button>
-            </li>
-            <li>
-              <button className="bg-white rounded-full border-1 w-10 h-10  overflow-hidden">
-                <img
-                  src="/src/assets/linkedin.png"
-                  alt="Avatar"
-                  className="w-full h-full object-cover"
-                />
-              </button>
-            </li>
-          </ul>
+              <a
+                href="https://www.instagram.com/nathan_bolyos/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="bg-gray-400 border-1 rounded-full w-10 h-10 overflow-hidden">
+                  <img
+                    src="/src/assets/instagram.png"
+                    alt="Instagram"
+                    className="w-full h-full object-cover"
+                  />
+                </button>
+              </a>
 
+            </li>
+            <li>
+              <a
+                href="https://wa.me/33708326585"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="bg-white rounded-full border border-gray-300 w-10 h-10 overflow-hidden">
+                  <img
+                    src="/src/assets/whatsapp.png"
+                    alt="WhatsApp"
+                    className="w-full h-full object-cover"
+                  />
+                </button>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://github.com/Ogowan"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="bg-white rounded-full border border-gray-300 w-10 h-10 overflow-hidden">
+                  <img
+                    src="/src/assets/github.png"
+                    alt="GitHub"
+                    className="w-full h-full object-cover"
+                  />
+                </button>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/nathan-bolyos-8b4b35384/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="bg-white rounded-full border border-gray-300 w-10 h-10 overflow-hidden">
+                  <img
+                    src="/src/assets/linkedin.png"
+                    alt="LinkedIn"
+                    className="w-full h-full object-cover"
+                  />
+                </button>
+              </a>
+            </li>
+
+          </ul>
         </div>
       </div>
-
       <ul className="flex flex-col gap-4 w-full">
-        <li className="cursor-pointer hover:bg-blue-500 p-2 rounded w-full text-center">Home</li>
-        <li className="cursor-pointer hover:bg-blue-500 p-2 rounded w-full text-center">About</li>
-        <li className="cursor-pointer hover:bg-blue-500 p-2 rounded w-full text-center">Resume </li>
-        <li className="cursor-pointer hover:bg-blue-500 p-2 rounded w-full text-center">Portfolio</li>
-        <li className="cursor-pointer hover:bg-blue-500 p-2 rounded w-full text-center">Services</li>
-        <li className="cursor-pointer hover:bg-blue-500 p-2 rounded w-full text-center">Contact</li>
+        <li className="w-full text-center">
+          <a href="#home" className="cursor-pointer hover:bg-blue-500 p-2 rounded block">Home</a>
+        </li>
+        <li className="w-full text-center">
+          <a href="#about" className="cursor-pointer hover:bg-blue-500 p-2 rounded block">About</a>
+        </li>
+        <li className="w-full text-center">
+          <a href="#resume" className="cursor-pointer hover:bg-blue-500 p-2 rounded block">Resume</a>
+        </li>
+        <li className="w-full text-center">
+          <a href="#portfolio" className="cursor-pointer hover:bg-blue-500 p-2 rounded block">Portfolio</a>
+        </li>
+        <li className="w-full text-center">
+          <a href="#services" className="cursor-pointer hover:bg-blue-500 p-2 rounded block">Services</a>
+        </li>
+        <li className="w-full text-center">
+          <a href="#contact" className="cursor-pointer hover:bg-blue-500 p-2 rounded block">Contact</a>
+        </li>
       </ul>
     </nav>
   );

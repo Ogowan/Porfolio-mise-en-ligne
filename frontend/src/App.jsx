@@ -4,6 +4,7 @@ import Body from "./components/Body";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume";
+import Skills from "./components/Skills";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 import Logiciel from "./components/Logiciel";
@@ -16,14 +17,15 @@ function App() {
       <Navbar />
 
       {/* Contenu principal */}
-      <main className="ml-64 flex-1 flex flex-col min-h-screen">
+      <main className=" flex-1 flex flex-col min-h-screen">
         <div className="flex-1">
-          <Body />
-          <About />
-          <Resume/>
-          <Logiciel/>
-          <Portfolio/>
-          <Contact/>
+          <section id="home" className="ml-64"><Body /></section>
+          <section id="about" className="ml-64"><About /></section>
+          <section id="resume" className="ml-64"><Resume /></section>
+          <section id="skills" className="ml-64"><Skills /></section>
+          <section id="services" className="ml-64"><Logiciel /></section>
+          <section id="portfolio" className="ml-64"><Portfolio /></section>
+          <section id="contact" className="ml-64"><Contact /></section>
         </div>
         <Footer />
       </main>
