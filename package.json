@@ -4,5 +4,8 @@
     "react-image-lightbox": "^5.1.4",
     "tailwindcss": "^4.1.14",
     "yet-another-react-lightbox": "^3.25.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
